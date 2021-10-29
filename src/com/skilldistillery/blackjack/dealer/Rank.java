@@ -1,4 +1,4 @@
-package com.skilldistillery.blackjack;
+package com.skilldistillery.blackjack.dealer;
 
 
 public enum Rank {
@@ -13,5 +13,5 @@ public enum Rank {
 	public int getValue() {
 		return value;
 	}
-
+	
 }
