@@ -1,19 +1,14 @@
 package com.skilldistillery.blackjack.dealer;
 
+import java.util.List;
+
 public abstract class Hand {
-	
-	public void addCard(Card card) {
-		
-	}
-	
-	public void clear() {
-		
-	}
-	
-	public int getHandValue() {
-		int handValue = 0;
-		
-		return handValue;
-	}
-	
+	protected List<Card> playerHand;
+
+	public abstract void buildHand(Card card);
+
+	public abstract void fold();
+
+	public abstract int getHandValue();
+
 }

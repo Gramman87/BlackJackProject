@@ -5,22 +5,21 @@ import java.util.Objects;
 public class Card {
 	private Suit suit;
 	private Rank rank;
-	
+
 	public Card(Suit suit, Rank rank) {
 		this.suit = suit;
 		this.rank = rank;
 	}
-	
+
 	public int getValue() {
-		
 		return this.getValue();
 	}
-	
+
 	@Override
 	public String toString() {
 		return rank + " " + suit;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(rank, suit);
@@ -37,7 +36,5 @@ public class Card {
 		Card other = (Card) obj;
 		return rank == other.rank && suit == other.suit;
 	}
-	
-	
 
 }

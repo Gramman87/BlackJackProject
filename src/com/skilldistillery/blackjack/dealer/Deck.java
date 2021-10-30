@@ -13,18 +13,15 @@ public class Deck {
 				deck.add(new Card(s, r));
 			}
 		}
+		shuffleDeck();
 	}
 
 	public int cardsRemaining() {
 		return deck.size();
 	}
 
-	public Card dealCard() {
+	public Card getCard() {
 		return deck.remove(0);
-	}
-
-	public void dealHand() {
-
 	}
 
 	public void shuffleDeck() {

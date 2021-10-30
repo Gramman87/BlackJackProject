@@ -1,9 +1,11 @@
 package com.skilldistillery.blackjack.game;
 
+import com.skilldistillery.blackjack.dealer.BlackjackGame;
+
 public class BlackjackApp {
 	
 	public static void main(String[] args) {
-		BlackjackDealer thisDealer = new BlackjackDealer("Dealer");
+		BlackjackGame thisDealer = new BlackjackGame("Dealer");
 		
 		thisDealer.launch();
  	}
