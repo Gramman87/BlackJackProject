@@ -1,7 +1,6 @@
 package com.skilldistillery.blackjack.dealer;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class BlackjackHand extends Hand {
 
@@ -31,6 +30,20 @@ public class BlackjackHand extends Hand {
 		}
 
 		return handValue;
+	}
+
+	public void showHand() {
+		for (Card card : playerHand) {
+			System.out.print(card.toString());
+		}
+		System.out.println();
+	}
+
+	public void showDealerHand() {
+		for(int i = 1; i < playerHand.size(); i++) {
+			System.out.print(playerHand.get(i));
+		}
+		System.out.println();
 	}
 
 }

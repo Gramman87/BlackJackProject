@@ -12,7 +12,7 @@ public class Card {
 	}
 
 	public int getValue() {
-		return this.getValue();
+		return rank.getValue();
 	}
 
 	@Override

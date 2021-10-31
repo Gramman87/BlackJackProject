@@ -27,7 +27,25 @@ public class BlackjackGame {
 		System.out.println("Lets play some Blackjack!");
 
 		startGame(players);
+		
 
+	}
+
+	private void showHand() {
+		for (Player player : players) {
+			if(player instanceof BlackjackDealer) {
+				player.showDealerHand();
+			} else {
+				player.showHand();
+			}
+		}
+		
+	}
+	
+	private void getHandValue() {
+		for (Player player : players) {
+			player.getHandValue();
+		}
 	}
 
 	private void addPlayer(int numPlayers) {
@@ -45,6 +63,8 @@ public class BlackjackGame {
 				player.buildHand(dealer.dealCard());
 			}
 		}
+
+		showHand();
 	}
 
 	public void playGame() {

@@ -15,5 +15,5 @@ public class BlackjackDealer extends Player {
 	public Card dealCard() {
 		return gameDeck.getCard();
 	}
-
+	
 }
