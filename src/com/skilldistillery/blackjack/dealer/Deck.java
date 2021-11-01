@@ -28,4 +28,8 @@ public class Deck {
 		Collections.shuffle(deck);
 	}
 
+	public void add(Card card) {
+		deck.add(card);
+	}
+
 }

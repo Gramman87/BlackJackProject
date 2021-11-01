@@ -1,6 +1,7 @@
 package com.skilldistillery.blackjack.dealer;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class BlackjackHand extends Hand {
 
@@ -15,10 +16,7 @@ public class BlackjackHand extends Hand {
 
 	@Override
 	public void fold() {
-		for (Card card : playerHand) {
-			playerHand.remove(card);
-		}
-
+		playerHand.removeAll(playerHand);
 	}
 
 	@Override
@@ -36,14 +34,21 @@ public class BlackjackHand extends Hand {
 		for (Card card : playerHand) {
 			System.out.print(card.toString());
 		}
-		System.out.println();
+	}
+
+	public int showDealerHandValue() {
+		int dealerShowValue = 0;
+		for (int i = 1; i < playerHand.size(); i++) {
+			dealerShowValue += playerHand.get(i).getValue();
+		}
+
+		return dealerShowValue;
 	}
 
 	public void showDealerHand() {
-		for(int i = 1; i < playerHand.size(); i++) {
+		for (int i = 1; i < playerHand.size(); i++) {
 			System.out.print(playerHand.get(i));
 		}
-		System.out.println();
 	}
 
 }

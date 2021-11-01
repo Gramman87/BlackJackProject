@@ -1,7 +1,5 @@
 package com.skilldistillery.blackjack.dealer;
 
-import java.util.List;
-
 public class Player {
 	private String name;
 	protected BlackjackHand playerHand;
@@ -16,17 +14,24 @@ public class Player {
 	}
 	
 	public void getHandValue() {
-		System.out.println(playerHand.getHandValue());
+		playerHand.getHandValue();
+	}
+	
+	public int handValue() {
+		return playerHand.getHandValue();
 	}
 	
 	public void showHand() {
 		System.out.println(getName());
 		playerHand.showHand();
+		System.out.println("\t" + playerHand.getHandValue());
+		System.out.println();
 	}
 	
 	public void showDealerHand() {
 		System.out.println(getName());
 		playerHand.showDealerHand();
+		System.out.println("\t" + playerHand.showDealerHandValue());
 	}
 	
 	public String getName() {
@@ -40,6 +45,10 @@ public class Player {
 	@Override
 	public String toString() {
 		return "Player name: " + name;
+	}
+
+	public void fold() {
+		playerHand.fold();
 	}
 
 

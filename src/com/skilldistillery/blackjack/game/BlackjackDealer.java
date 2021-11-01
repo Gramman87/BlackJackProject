@@ -9,11 +9,18 @@ public class BlackjackDealer extends Player {
 
 	public BlackjackDealer(String name) {
 		super(name);
-		gameDeck = new Deck();
 	}
 
 	public Card dealCard() {
 		return gameDeck.getCard();
+	}
+	
+	public void newDeck() {
+		gameDeck = new Deck();
+	}
+	
+	public void shuffleDeck() {
+		gameDeck.shuffleDeck();
 	}
 	
 }
