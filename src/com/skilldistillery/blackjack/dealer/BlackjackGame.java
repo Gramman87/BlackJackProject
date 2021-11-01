@@ -162,12 +162,15 @@ public class BlackjackGame {
 			if (players.get(i).handValue() > dealerHand && players.get(i).handValue() < 22 || dealerHand > 21 && players.get(i).handValue() < 22) {
 				players.get(i).showHand();
 				System.out.println("Congrats... You BEAT the House!");
+				System.out.println();
 			} else if (players.get(i).handValue() == dealerHand) {
 				players.get(i).showHand();
 				System.out.println("PUSH...");
+				System.out.println();
 			} else if (players.get(i).handValue() < dealerHand && players.get(i).handValue() < 22) {
 				players.get(i).showHand();
 				System.out.println("Better luck next time...");
+				System.out.println();
 			}
 
 		}
