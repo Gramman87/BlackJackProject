@@ -137,7 +137,7 @@ public class BlackjackGame {
 						if (player.playerHand.getHandValue() > 21) {
 							System.err.println("Player BUST!");
 							player.showHand();
-							System.err.println("=======================================");
+							System.out.println("=======================================");
 							playerUp = false;
 							break;
 						}
