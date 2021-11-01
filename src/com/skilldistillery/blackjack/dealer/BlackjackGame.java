@@ -159,7 +159,7 @@ public class BlackjackGame {
 	private void decideGame() {
 		int dealerHand = players.get(players.size() - 1).handValue();
 		for (int i = 0; i < players.size() - 1; i++) {
-			if (players.get(i).handValue() > dealerHand && players.get(i).handValue() < 22) {
+			if (players.get(i).handValue() > dealerHand && players.get(i).handValue() < 22 || dealerHand > 21 && players.get(i).handValue() < 22) {
 				System.out.println(players.get(i).getName());
 				System.out.println("Congrats... You BEAT the House!");
 			} else if (players.get(i).handValue() == dealerHand) {
