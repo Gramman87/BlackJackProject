@@ -12,28 +12,28 @@ public class Player {
 	public void buildHand(Card card) {
 		playerHand.buildHand(card);
 	}
-	
+
 	public void getHandValue() {
 		playerHand.getHandValue();
 	}
-	
+
 	public int handValue() {
 		return playerHand.getHandValue();
 	}
-	
+
 	public void showHand() {
 		System.out.println(getName());
 		playerHand.showHand();
 		System.out.println("\t" + playerHand.getHandValue());
 		System.out.println();
 	}
-	
+
 	public void showDealerHand() {
 		System.out.println(getName());
 		playerHand.showDealerHand();
 		System.out.println("\t" + playerHand.showDealerHandValue());
 	}
-	
+
 	public String getName() {
 		return name;
 	}
@@ -50,6 +50,5 @@ public class Player {
 	public void fold() {
 		playerHand.fold();
 	}
-
 
 }

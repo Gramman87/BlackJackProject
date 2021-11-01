@@ -14,13 +14,13 @@ public class BlackjackDealer extends Player {
 	public Card dealCard() {
 		return gameDeck.getCard();
 	}
-	
+
 	public void newDeck() {
 		gameDeck = new Deck();
 	}
-	
+
 	public void shuffleDeck() {
 		gameDeck.shuffleDeck();
 	}
-	
+
 }

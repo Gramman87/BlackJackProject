@@ -1,7 +1,6 @@
 package com.skilldistillery.blackjack.dealer;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class BlackjackHand extends Hand {
 

@@ -19,7 +19,7 @@ public class BlackjackGame {
 
 		System.out.println("Welcome to Blackjack!");
 		System.out.println();
-		System.out.println("How many players (1-4): ");
+		System.out.println("How many players (1-8): ");
 		addPlayer(sc.nextInt());
 		sc.nextLine();
 		players.add(dealer);
@@ -76,6 +76,8 @@ public class BlackjackGame {
 	}
 
 	public void nextGame(List<Player> players) {
+		System.out.println("=======================================");
+
 		dealer.newDeck();
 
 		for (int i = 0; i < 2; i++) {
@@ -116,8 +118,9 @@ public class BlackjackGame {
 						break;
 					}
 					if (player.playerHand.getHandValue() > 21) {
-						player.showHand();
 						System.out.println("Dealer BUST!");
+						playerUp = false;
+						break;
 
 					} else if (player.playerHand.getHandValue() < 17) {
 						player.buildHand(dealer.dealCard());
