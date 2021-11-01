@@ -137,7 +137,7 @@ public class BlackjackGame {
 						if (player.playerHand.getHandValue() > 21) {
 							System.err.println("Player BUST!");
 							player.showHand();
-							System.out.println("=======================================");
+							System.err.println("=======================================");
 							playerUp = false;
 							break;
 						}
@@ -160,15 +160,12 @@ public class BlackjackGame {
 		int dealerHand = players.get(players.size() - 1).handValue();
 		for (int i = 0; i < players.size() - 1; i++) {
 			if (players.get(i).handValue() > dealerHand && players.get(i).handValue() < 22 || dealerHand > 21 && players.get(i).handValue() < 22) {
-				System.out.println(players.get(i).getName());
 				players.get(i).showHand();
 				System.out.println("Congrats... You BEAT the House!");
 			} else if (players.get(i).handValue() == dealerHand) {
-				System.out.println(players.get(i).getName());
 				players.get(i).showHand();
 				System.out.println("PUSH...");
 			} else if (players.get(i).handValue() < dealerHand && players.get(i).handValue() < 22) {
-				System.out.println(players.get(i).getName());
 				players.get(i).showHand();
 				System.out.println("Better luck next time...");
 			}
